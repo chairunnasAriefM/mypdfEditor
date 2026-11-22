@@ -47,7 +47,7 @@ dokumen_gabung.pdf      dokumen_ekstrak.pdf   dokumen_putar.pdf
 dokumen_split/          (untuk pecah per N halaman)
 ```
 
-## Membangun dari sumber
+## Membangun dari kode sumber
 
 Prasyarat: Go 1.21+, Node 18+, Wails CLI.
 
@@ -75,29 +75,6 @@ frontend/src/
   components/        panel tiap alat + viewer halaman
   utils/             watermarkEngine, compressEngine, mrcCore, worker pool
 ```
-
-## Mengganti logo
-
-| Logo | Taruh di | Catatan |
-|---|---|---|
-| Ikon `.exe` dan taskbar | `build/appicon.png` | PNG persegi 1024×1024. Lihat `build/README.md`. |
-| Isi bulatan melayang | `frontend/src/assets/logo/bubble.png` (atau `.svg`, `.webp`, `.jpg`) | Dipotong jadi lingkaran. |
-| Merek di header dan sidebar | `frontend/src/assets/logo/app.png` (atau `.svg`, `.webp`, `.jpg`) | Opsional. |
-
-Bila file belum ada, tampilan bawaan dipakai. Logo ikut tertanam di `.exe`, tetap offline.
-
-## Prinsip portabilitas
-
-- Satu `.exe`, aset frontend ditanam lewat `go:embed`. **Tanpa CDN.**
-- Tanpa UAC (`asInvoker`); tidak menulis ke Program Files, Windows, atau Registry HKLM.
-- Tanpa Ghostscript, Poppler, ImageMagick, Python, atau Java.
-- Folder konfigurasi pdfcpu dimatikan agar tidak ada file yang dibuat di profil pengguna.
-
-## Masalah umum
-
-- **Kotak/bayangan di sekitar bulatan**: pastikan memakai build terbaru; kirim screenshot dan versi Windows lewat issue.
-- **Posisi/ukuran jendela meleset di layar 125–150%**: laporkan dengan skala layar Anda; perhitungan DPI ada di `app.go` dan `platform_windows.go`.
-- **Kompres tidak mencapai target**: lihat teks tahap dan dpi di panel, lalu sertakan di issue.
 
 ## Lisensi
 
