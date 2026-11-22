@@ -1,0 +1,24 @@
+# Hasil build
+build/bin/
+*.exe
+*.zip
+
+# Node
+node_modules/
+frontend/dist/*
+!frontend/dist/.gitkeep
+# Binding hasil generate Wails (dibuat otomatis saat wails dev / wails build)
+frontend/wailsjs/
+frontend/package-lock.json.md5
+
+# Go
+*.test
+*.out
+vendor/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

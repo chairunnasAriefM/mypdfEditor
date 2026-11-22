@@ -1,0 +1,19 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "PDF Bubble",
+  "outputfilename": "PDFBubble",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "PDF Bubble"
+  },
+  "info": {
+    "companyName": "PDF Bubble",
+    "productName": "PDF Bubble",
+    "productVersion": "1.0.0",
+    "copyright": "Copyright (c) 2026 PDF Bubble contributors",
+    "comments": "Floating PDF toolkit for Windows"
+  }
+}
